@@ -13,6 +13,13 @@
       referrerpolicy="no-referrer"
     />
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -23,6 +30,46 @@
           <svg class="header__logo logo" width="158" height="70">
             <use href="./images/svg/sprite.svg#icon-logo"></use>
           </svg>
+          <button
+            class="header__menu menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="" width="30" height="16">
+              <use href="./images/svg/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <!-- MOBILE MENU -->
+          <div class="mobile-menu__container js-menu-container" id="mobile-menu">
+            <svg class="header__logo header__logo-menu logo" width="158" height="70">
+              <use href="./images/svg/sprite.svg#icon-logo"></use>
+            </svg>
+            <button class="header__close mobile-menu__btn menu-toggle js-close-menu">
+              <svg width="32" height="32">
+                <use href="./images/svg/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <list class="mobile-menu__list list">
+              <ul class="mobile-menu__item">
+                <a class="link" href="#about">About us</a>
+              </ul>
+              <ul class="mobile-menu__item">
+                <a class="link" href="#program">Program</a>
+              </ul>
+              <ul class="mobile-menu__item mobile-menu__item--accent">
+                <a class="link" href="#speakers">Speaker</a>
+              </ul>
+              <ul class="mobile-menu__item">
+                <a class="link" href="#price">Price</a>
+              </ul>
+              <ul class="mobile-menu__item">
+                <a class="link" href="#reviews">Reviws</a>
+              </ul>
+              <ul class="mobile-menu__item">
+                <a class="link" href="#registration">Contact</a>
+              </ul>
+            </list>
+          </div>
           <nav class="nav">
             <list class="nav__list list">
               <ul class="nav__item">
@@ -48,7 +95,7 @@
         </div>
         <h1 class="header__title">Donut Masterclass with the Donut King</h1>
         <p class="header__subtitle">Hosted by Eva Green</p>
-        <button class="header__btn" type="button">Register</button>
+        <button class="header__btn btn" type="button">Register</button>
         <list class="socials__list list">
           <ul class="socials__item">
             <svg class="socials__icon" width="16" height="16">
@@ -71,7 +118,7 @@
     <!-- Основний контент -->
     <main>
       <!-- ABOUT -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container">
           <picture>
             <!-- Desktop screen -->
@@ -130,7 +177,7 @@
         </div>
       </section>
       <!-- PROGRAM -->
-      <section class="program">
+      <section class="program" id="program">
         <div class="program__container">
           <h2 class="program__title">Program</h2>
           <p class="program__text">
@@ -341,7 +388,7 @@
         </div>
       </section>
       <!-- SPEAKERS -->
-      <section class="speakers">
+      <section class="speakers" id="speakers">
         <div class="speakers__container">
           <h2 class="speakers__title">Speakers</h2>
           <list class="speakers__list list">
@@ -557,7 +604,7 @@
         </div>
       </section>
       <!-- PRICE -->
-      <section class="price">
+      <section class="price" id="price">
         <div class="price__container">
           <h2 class="price__title">Price</h2>
           <div class="price__wrapper">
@@ -637,7 +684,7 @@
         </div>
       </section>
       <!-- REVIEWS -->
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__container">
           <div class="reviews__wrapper">
             <div class="reviews__card reviews__card--main">
@@ -788,7 +835,7 @@
         </div>
       </section>
       <!-- REGISTRATION -->
-      <section class="registration">
+      <section class="registration" id="registration">
         <div class="registration__container">
           <h2 class="registration__title">Registration</h2>
           <picture>
@@ -946,5 +993,7 @@
         </div>
       </footer>
     </footer>
+
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

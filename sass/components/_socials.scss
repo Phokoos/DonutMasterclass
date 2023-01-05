@@ -1,0 +1,21 @@
+.socials__list {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+
+	@media screen and (min-width:768px) {
+		justify-content: left;
+		align-items: center;
+	}
+}
+
+.socials__item {
+	&:hover,
+	&:active{
+		color: $main-btn-color;
+	}
+}
+
+.socials__icon {
+	fill: currentColor;
+}

@@ -1,0 +1,44 @@
+body {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+
+	background-color: $primary-background-color;
+	color: $text-color;
+}
+
+.btn {
+	width: 145px;
+	height: 40px;
+
+	text-decoration: none;
+	font-family: inherit;
+	cursor: pointer;
+	border: 0px;
+
+	
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+
+	color: $primary-white-color;
+	background-color: $main-btn-color;
+	border-radius: 25px;
+
+	box-shadow: (10px 15px 25px rgba(232, 183, 183, 0.45));
+
+	&:focus,
+	&:hover{
+		border: 1px solid $main-btn-color;
+		background-color: $primary-white-color;
+		color: $main-btn-color;
+	}
+
+	&:active{
+		box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25) , (10px 15px 25px rgba(232, 183, 183, 0.45));
+		color: $primary-white-color;
+		background-color: $main-btn-color;
+		border: 1px solid $primary-white-color;
+	}
+}
