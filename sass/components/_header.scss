@@ -12,7 +12,7 @@
 		(min-resolution:2dppx){
 			background-image: url(../images/hero/img-1-d@2x.jpg);
 		}
-		background-size: auto;	
+		background-size: contain;	
 	}
 	@media (min-width: 768px) and (max-width: 1199px){
 		padding-top: 24px;

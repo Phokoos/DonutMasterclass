@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -9,26 +10,26 @@
   clip: rect(0 0 0 0);
 }
 
-.about__container, .header__container {
+.program__container, .about__container, .header__container {
   margin-left: auto;
   margin-right: auto;
   padding-right: 20px;
   padding-left: 20px;
 }
 @media (max-width: 767px) {
-  .about__container, .header__container {
+  .program__container, .about__container, .header__container {
     max-width: 480px;
   }
 }
 @media (min-width: 768px) {
-  .about__container, .header__container {
+  .program__container, .about__container, .header__container {
     width: 768px;
     padding-right: 32px;
     padding-left: 32px;
   }
 }
 @media (min-width: 1200px) {
-  .about__container, .header__container {
+  .program__container, .about__container, .header__container {
     width: 1200px;
     padding-right: 16px;
     padding-left: 16px;
@@ -111,7 +112,7 @@ img {
     padding-top: 36px;
     padding-bottom: 90px;
     background-image: url(../images/hero/img-1-d@1x.jpg);
-    background-size: auto;
+    background-size: contain;
   }
 }
 @media (min-width: 1200px) and (min-device-pixed-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -494,4 +495,87 @@ img {
     line-height: 1.2222222222;
     text-align: left;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .program {
+    padding-top: 10px;
+    padding-bottom: 1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .program__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2083333333;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
+.program__text {
+  margin-bottom: 8px;
+}
+
+.program__list {
+  margin-bottom: 16px;
+}
+
+.program__item {
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.program__item::before {
+  display: block;
+  content: " ";
+  background-image: url("../images/svg/original/Іко.svg");
+  background-size: 28px 28px;
+  height: 28px;
+  min-width: 28px;
+}
+
+.program__type-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .program__type-list {
+    gap: 20px;
+  }
+}
+
+.program__type-item {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .program__type-item {
+    width: 100%;
+    -ms-flex-preferred-size: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
+.program__img {
+  min-width: 130px;
+}
+
+.program__type-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }/*# sourceMappingURL=main.css.map */

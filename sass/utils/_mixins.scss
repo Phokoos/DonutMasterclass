@@ -12,4 +12,14 @@
 	text-align: $text-align;
 }
 
+@mixin hat{
+	&::before{
+		display: block;
+		content: ' ';
+		background-image: url('../images/svg/original/Іко.svg');
+		background-size: 28px 28px;
+		height: 28px;
+		min-width: 28px;
+	}
+}
 
