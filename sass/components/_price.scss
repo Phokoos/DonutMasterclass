@@ -1,0 +1,142 @@
+.price {
+	.speakers {
+	@media screen and (max-width:767px) {
+	}
+	@media screen and (min-width:768px) and (max-width:1199px) {
+	}
+	@media screen and (min-width:1200px) {
+	}
+}
+}
+
+.price__container {
+	@extend %container;
+}
+
+.price__title {
+	margin-bottom: 27px;
+
+	@include title;
+
+	@media screen and (min-width:768px){
+		margin-bottom: 31px;
+
+		@include title(500, 32px, 39px);
+	}
+	@media screen and (min-width:1200px){
+		margin-bottom: 27px;
+	}
+}
+
+.price__wrapper {
+	@media screen and (min-width:768px){
+		display: flex;
+		gap: 15px;
+	}
+	@media screen and (min-width:1200px){
+		display: flex;
+		gap: 32px;
+	}
+}
+
+.price__card {
+	padding: 20px 18px 20px 8px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 30px;
+
+	background-color: $primary-white-color;
+	box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+	border-radius: 25px;
+
+	background-image: url(../images/price/img-1-m@1x.jpg);
+	@media(min-device-pixed-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution:2dppx){
+		background-image: url(../images/price/img-1-m@2x.jpg);
+	}
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position: center bottom 100px;
+
+	@media screen and (max-width:767px) {
+		&:not(:last-child){
+			margin-bottom: 24px;
+		}
+	}
+	@media screen and (min-width:768px) and (max-width:1199px) {
+		padding: 20px 12px 20px 10px;
+
+		gap: 36px;
+		flex-basis: calc((100% - 15px*2)/3);
+	}
+
+	@media screen and (min-width:1200px){
+		padding: 28px 6px 40px 10px;
+
+		gap: 40px;
+		flex-basis: calc((100% - 32px*2)/3);
+
+		background-size: 300px;
+	}
+}
+
+.price__card--border{
+	border: 1px solid $main-btn-color;
+}
+
+.price__card-container{
+
+}
+
+.price__subtitle {
+	margin-bottom: 16px;
+
+	@include title(600, 18px, 22px);
+
+	@media screen and (min-width:1200px){
+		margin-bottom: 40px;
+
+		@include title(600, 20px, 24px);
+	}
+}
+
+.price__list {
+}
+
+.price__item {
+	&:not(:last-child){
+		margin-bottom: 12px;
+	}
+
+	display: flex;
+	gap: 10px;
+
+	@include hat;
+
+	@media screen and (min-width:1200px){
+		margin-bottom: 40px;
+
+		@include text(400, 18px, 22px, left);
+
+		&:not(:last-child){
+			margin-bottom: 14px;
+	}
+	}
+}
+
+.price__link {
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: $primary-white-color;
+
+	font-weight: 400;
+	@include text(400, 18px, 22px);
+}
