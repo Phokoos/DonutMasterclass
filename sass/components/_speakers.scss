@@ -1,0 +1,89 @@
+.speakers {
+	@media screen and (max-width:767px) {
+		padding-top: 40px;
+		padding-bottom: 33px;
+		
+	}
+	@media screen and (min-width:768px) and (max-width:1199px) {
+		padding-top: 44px;
+		padding-bottom: 77px;
+	}
+	@media screen and (min-width:1200px) {
+		padding-top: 60px;
+		padding-bottom: 100px;
+	}
+}
+.speakers__container {
+	@extend %container;
+
+	
+}
+
+.speakers__title {
+	@include title;
+
+	@media screen and (max-width:767px) {
+		margin-bottom: 16px;	
+	}
+	@media screen and (min-width:768px){
+		margin-bottom: 20px;
+
+		@include title(500, 32px, 39px);
+	}
+	@media screen and (min-width:1200px) {
+		margin-bottom: 40px;
+	}
+}
+
+.speakers__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	@media screen and (min-width:768px) {
+		gap: 32px;
+	}
+}
+
+.speakers__item {
+	flex-basis: calc((100% - 20px)/2);
+
+	@media screen and (min-width:768px) {
+		flex-basis: calc((100% - 32px*3)/4);
+	}
+}
+
+.speakers__img {
+	width: 100%;
+	margin-bottom: 12px;
+
+	@media screen and (min-width:768px){
+		margin-bottom: 20px;
+	}
+}
+
+.speakers__subtitle {
+	margin-bottom: 12px;
+
+	@include title(600, 16px, 20px);
+
+	@media screen and (min-width:768px){
+		margin-bottom: 20px;
+
+		@include title(600, 18px, 22px);
+	}
+}
+
+.speakers__desc {
+	@include text(500, 12px, 15px);
+
+	@media screen and (min-width:768px){
+		@include text(500, 14px, 17px);
+	}
+
+	@media screen and (min-width: 1200px){
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 165px;
+	}
+}
