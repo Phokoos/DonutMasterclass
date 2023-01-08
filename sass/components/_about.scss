@@ -71,6 +71,8 @@
 
 		border-radius: 24px;
 	}	
+
+	@include scale;
 }
 
 .about__wrapper{

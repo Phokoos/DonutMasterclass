@@ -92,6 +92,8 @@
 	background-repeat: no-repeat;
 	background-position: center bottom 100px;
 
+	@include scale;
+
 	@media screen and (max-width:767px) {
 		&:not(:last-child){
 			margin-bottom: 24px;

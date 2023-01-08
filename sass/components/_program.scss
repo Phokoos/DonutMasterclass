@@ -185,6 +185,8 @@
 		align-items: center;
 		justify-content: flex-end;
 	}
+
+	@include scale;
 }
 
 .program__img {

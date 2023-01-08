@@ -17,5 +17,7 @@
 }
 
 .socials__icon {
+	@include transition(color);
+
 	fill: currentColor;
 }
