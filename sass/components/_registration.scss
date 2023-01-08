@@ -121,9 +121,6 @@
 	box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
 	border-radius: 10px;
 
-
-	
-	
 	@media (max-width: 767px){
 		padding: 40px 8px 32px 8px;
 
@@ -166,10 +163,6 @@
 	}
 }
 
-.form {
-	
-}
-
 .form__group {
 	@media screen and (min-width:768px){
 		display: flex;
@@ -192,13 +185,6 @@
 
 		@include title(500, 20px, 24px, left);
 	}
-}
-
-.form__wrapper {
-}
-
-.form__content{
-
 }
 
 .form__field {
@@ -243,8 +229,6 @@
 	}
 }
 
-.modal {
-}
 .modal__submit {
 	display: block;
 	margin-left: auto;

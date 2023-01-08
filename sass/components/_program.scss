@@ -14,7 +14,6 @@
 .program__container {
 	@extend %container;
 
-
 	@media screen and (max-width:767px) {
 		background-image:url(../images/program/circles-m@1x.png); 
 		@media(min-device-pixed-ratio: 2),
@@ -188,11 +187,6 @@
 
 	@include scale;
 }
-
-.program__img {
-	
-}
-
 
 .program__type-wrapper{
 	position: absolute;
