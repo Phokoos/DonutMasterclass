@@ -1,0 +1,258 @@
+.registration {
+	@media screen and (max-width:767px) {
+		padding-top: 40px;
+	}
+	@media screen and (min-width:768px) and (max-width:1199px) {
+	}
+
+	@media screen and (min-width:1200px) {
+		padding-top: 100px;
+	}
+
+}
+.registration__container {
+	@extend %container;
+
+	@media screen and (max-width:767px) {
+		background-image:url(../images/registration/circles-m@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/registration/circles-m@2x.png);
+		}
+		background-size: 25%;
+		background-position: top 25px right 10px;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (min-width:768px) {
+		padding-top: 80px;
+		padding-bottom: 68px;
+
+		background-image:url(../images/registration/circles-t@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/registration/circles-t@2x.png);
+		}
+		background-size: 171px;
+		background-position: top 35px left;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (min-width:1200px) {
+		padding: 0 83px;
+	}
+
+}
+
+.registration__title {
+	margin-bottom: 27px;
+
+	@include title;
+
+	@media screen and (min-width:768px){
+		@include title(500, 32px, 39px);
+	}
+}
+
+.registration__img {
+	@media (max-width: 767px){
+		display: none;
+	}
+
+	@media screen and (min-width:768px){
+		position: absolute;
+		left: -20px;
+		bottom: -30px;
+	}
+
+	@media screen and (min-width: 1200px){
+		left: -200px;
+		bottom: -20px;
+	}
+}
+
+.registration__date {
+	display: block;
+
+	font-family: 'Montserrat';
+	color: $primary-white-color;
+	@include text(500, 18px, 22px);
+
+
+	@media screen and (max-width:767px) {
+		&::after{
+		content: ' ';
+		display: block;
+		width: 100%;
+		height: 1px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		background-color: $primary-white-color;
+		}
+	}
+	
+
+	@media screen and (min-width:768px){
+		width: 144px;
+		padding-right: 32px;
+		margin-right: 24px;
+		padding-top: 45px;
+
+		@include text(500, 18px, 22px, right);
+		color: $primary-black-color;
+
+		border-right: 1px solid rgba(0, 0, 0, 0.5);
+	}
+
+	@media screen and (min-width: 1200px){
+		width: 183px;
+		padding-right: 28px;
+		margin-right: 28px;
+		padding-top: 60px;
+
+		@include text(500, 18px, 22px, right);
+	}
+}
+
+.registration__form {
+	box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+	border-radius: 10px;
+
+
+	
+	
+	@media (max-width: 767px){
+		padding: 40px 8px 32px 8px;
+
+		background-image: linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.6) 100%), url(../images/registration/img-1-m@1x.webp);
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image: linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.6) 100%), url(../images/registration/img-1-m@2x.webp);
+		}
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-width:768px){
+		padding: 40px 40px 40px 62px;
+		height: 246px;
+
+		background-image: url(../images/registration/img-2-t@1x.webp) , linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.3) 100%), url(../images/registration/img-1-t@1x.webp);
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image: url(../images/registration/img-2-t@2x.webp) , linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.3) 100%), url(../images/registration/img-1-t@2x.webp);
+		}
+		background-size: contain;
+		background-position: left, center,right;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (min-width:1200px) {
+		padding: 40px 213px; 
+		max-width: 1023px;
+
+		background-image: url(../images/registration/img-2-d@1x.webp) , linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.3) 100%), url(../images/registration/img-1-d@1x.webp);
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image: url(../images/registration/img-2-d@2x.webp) , linear-gradient(90deg, rgba(61,44,44,0.6) 0%, rgba(61,44,44,0.3) 100%), url(../images/registration/img-1-d@2x.webp);
+		}
+		background-position: left, center, right;
+	}
+}
+
+.form {
+	
+}
+
+.form__group {
+	@media screen and (min-width:768px){
+		display: flex;
+		position: relative;
+	}
+}
+
+.form__desc {
+	font-family: 'Montserrat';
+	text-align: center;
+	color: $primary-white-color;
+
+	@media screen and (min-width:768px){
+		color: $primary-black-color;
+		text-align: left;
+		width: 283px;
+	}
+	@media screen and (min-width:1200px){
+		width: 267px;
+
+		@include title(500, 20px, 24px, left);
+	}
+}
+
+.form__wrapper {
+}
+
+.form__content{
+
+}
+
+.form__field {
+	width: 100%;
+	margin-top: 20px;
+
+	font-family: 'Montserrat';
+	color: $primary-white-color;
+
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $primary-white-color;
+	border-radius: 0px;
+
+	&:focus-visible{
+		outline-width: 0;
+	}
+
+	&::placeholder{
+		font-family: 'Montserrat';
+		color: $primary-white-color;
+	}
+
+	&:not(:placeholder-shown){
+		&:invalid {
+  			background-image: linear-gradient(90deg, rgba(255,0,0,0.2) 0%, rgba(255,0,0,0.2) 100%);
+			border-radius: 5px;
+		}
+	}
+
+	@media screen and (min-width:768px){
+		width: 237px;
+		margin-top: 16px;
+
+		color: $primary-black-color;
+		border-color: $primary-black-color;
+
+
+		&::placeholder{
+			color: $primary-black-color;
+		}
+	}
+}
+
+.modal {
+}
+.modal__submit {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 32px;
+	
+	@media screen and (min-width:768px){
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}

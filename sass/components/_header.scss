@@ -42,7 +42,19 @@
 .header__container {
 	@extend %container;
 	position: relative;
-	// text-align: left;
+	
+
+	@media screen and (min-width:1200px) {
+		background-image:url(../images/hero/circles-d@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/hero/circles-d@2x.png);
+		}
+		background-size: 150px;
+		background-position: center left 433px;
+		background-repeat: no-repeat;
+	}
 }
 
 .header__nav {

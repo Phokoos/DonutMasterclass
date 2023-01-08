@@ -2,10 +2,8 @@
 	@media screen and (max-width:767px) {
 		padding-top: 40px;
 		padding-bottom: 33px;
-		
 	}
 	@media screen and (min-width:768px) and (max-width:1199px) {
-		padding-top: 44px;
 		padding-bottom: 77px;
 	}
 	@media screen and (min-width:1200px) {
@@ -16,7 +14,42 @@
 .speakers__container {
 	@extend %container;
 
-	
+	@media screen and (max-width:767px) {
+		background-image:url(../images/speakers/circles-m@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/speakers/circles-m@2x.png);
+		}
+		background-size: 65%;
+		background-position: right top 40px;
+		background-repeat: no-repeat;
+	}
+	@media screen and (min-width:768px) {
+		padding-top: 44px;
+
+		background-image:url(../images/speakers/circles-t@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/speakers/circles-t@2x.png);
+		}
+		background-size: 768px;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (min-width:1200px) {
+		background-image:url(../images/speakers/circles-d@1x.png); 
+		@media(min-device-pixed-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution:2dppx){
+			background-image:url(../images/speakers/circles-d@2x.png);
+		}
+		background-size: 1140px;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
 }
 
 .speakers__title {

@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&family=Montserrat:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <!-- MAIN CSS -->
@@ -63,10 +63,10 @@
                 <a class="link" href="#price">Price</a>
               </ul>
               <ul class="mobile-menu__item">
-                <a class="link" href="#reviews">Reviws</a>
+                <a class="link" href="#reviews">Reviews</a>
               </ul>
               <ul class="mobile-menu__item">
-                <a class="link" href="#registration">Contact</a>
+                <a class="link" href="#contact">Contact</a>
               </ul>
             </list>
           </div>
@@ -88,7 +88,7 @@
                 <a class="link" href="#reviews">Reviws</a>
               </ul>
               <ul class="nav__item">
-                <a class="link" href="#registration">Contact</a>
+                <a class="link" href="#contact">Contact</a>
               </ul>
             </list>
           </nav>
@@ -704,6 +704,7 @@
       <!-- REVIEWS -->
       <section class="reviews" id="reviews">
         <div class="reviews__container">
+          <h2 class="reviews__title">Reviews</h2>
           <div class="reviews__wrapper">
             <div class="reviews__card reviews__card--main">
               <picture>
@@ -745,7 +746,7 @@
                   loading="lazy"
                 />
               </picture>
-              <svg class="reviews__rate-4" width="136px" height="24px">
+              <svg class="reviews__rate" width="136px" height="24px">
                 <use href="./images/svg/sprite.svg#icon-rate"></use>
               </svg>
               <h3 class="reviews__subtitle">Will</h3>
@@ -790,7 +791,7 @@
                   loading="lazy"
                 />
               </picture>
-              <svg class="reviews__rate-4" width="136px" height="24px">
+              <svg class="reviews__rate" width="136px" height="24px">
                 <use href="./images/svg/sprite.svg#icon-rate-4"></use>
               </svg>
               <h3 class="reviews__subtitle">John</h3>
@@ -835,7 +836,7 @@
                   loading="lazy"
                 />
               </picture>
-              <svg class="reviews__rate-4" width="136px" height="24px">
+              <svg class="reviews__rate" width="136px" height="24px">
                 <use href="./images/svg/sprite.svg#icon-rate"></use>
               </svg>
               <h3 class="reviews__subtitle">Elisabeth</h3>
@@ -856,43 +857,46 @@
       <section class="registration" id="registration">
         <div class="registration__container">
           <h2 class="registration__title">Registration</h2>
-          <picture>
-            <!-- Desktop screen -->
-            <source
-              media="(min-width:1200px)"
-              srcset="
-                ./images/registration/img-3-d@1x.webp 1x,
-                ./images/registration/img-3-d@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              media="(min-width:1200px)"
-              srcset="
-                ./images/registration/img-3-d@1x.jpg 1x,
-                ./images/registration/img-3-d@2x.jpg 2x
-              "
-              type="image/jpg"
-            />
-            <!-- Tablet version -->
-            <source
-              media="(min-width:768px)"
-              srcset="
-                ./images/registration/img-3-t@1x.webp 1x,
-                ./images/registration/img-3-t@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              media="(min-width:768px)"
-              srcset="
-                ./images/registration/img-3-t@1x.jpg 1x,
-                ./images/registration/img-3-t@2x.jpg 2x
-              "
-              type="image/jpg"
-            />
-            <!-- Mobile version -->
-            <!-- <source
+
+          <form class="registration__form form" name="registration-form">
+            <div class="form__group" role="group">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/registration/img-3-d@1x.webp 1x,
+                    ./images/registration/img-3-d@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/registration/img-3-d@1x.jpg 1x,
+                    ./images/registration/img-3-d@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet version -->
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/registration/img-3-t@1x.webp 1x,
+                    ./images/registration/img-3-t@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/registration/img-3-t@1x.jpg 1x,
+                    ./images/registration/img-3-t@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile version -->
+                <!-- <source
               srcset="
                 ./images/registration/img-3-m@1x.webp 1x,
                 ./images/registration/img-3-m@2x.webp 2x
@@ -906,64 +910,67 @@
               "
               type="image/jpg"
             /> -->
-            <img
-              class="registration__img"
-              src="./images/registration/img-3-d@1x.jpg"
-              alt="First review"
-              loading="lazy"
-            />
-          </picture>
-          <p class="registration__date">
-            May 23, 11:00 <br />
-            New York
-          </p>
-
-          <form class="registration__form form" name="registration-form">
-            <div class="form__group" role="group">
-              <p class="form__desc">
-                Apply your personal info <br />
-                for registration
+                <img
+                  class="registration__img"
+                  src="./images/registration/img-3-d@1x.jpg"
+                  alt="First review"
+                  loading="lazy"
+                />
+              </picture>
+              <p class="registration__date">
+                May 23, 11:00 <br />
+                New York
               </p>
-              <!-- <label class="form__label" for="user_name"></label> -->
-              <div class="form__wrapper">
-                <input
-                  class="form__field"
-                  type="text"
-                  name="user_name"
-                  id="user_name"
-                  required
-                  minlength="3"
-                  placeholder="Your name"
-                />
+              <div class="form__content">
+                <p class="form__desc">
+                  Apply your personal info <br />
+                  for registration
+                </p>
+                <!-- <label class="form__label" for="user_name"></label> -->
+                <div class="form__wrapper">
+                  <input
+                    class="form__field"
+                    type="text"
+                    name="user_name"
+                    id="user_name"
+                    required
+                    minlength="3"
+                    placeholder="Your name"
+                  />
+                </div>
+                <!-- <label class="form__label" for="user_phone">Телефон</label> -->
+                <div class="form__wrapper">
+                  <input
+                    class="form__field"
+                    type="tel"
+                    minlength="10"
+                    maxlength="18"
+                    required
+                    name="user_phone"
+                    id="user_phone"
+                    placeholder="Phone number"
+                  />
+                </div>
+                <!-- <label class="form__label" for="user_mail">Пошта</label> -->
+                <div class="form__wrapper">
+                  <input
+                    class="form__field"
+                    type="email"
+                    required
+                    name="user_mail"
+                    id="user_mail"
+                    placeholder="Email"
+                  />
+                </div>
               </div>
-              <!-- <label class="form__label" for="user_phone">Телефон</label> -->
-              <div class="form__wrapper">
-                <input
-                  class="form__field"
-                  type="tel"
-                  name="user_phone"
-                  id="user_phone"
-                  placeholder="Phone number"
-                />
-              </div>
-              <!-- <label class="form__label" for="user_mail">Пошта</label> -->
-              <div class="form__wrapper">
-                <input
-                  class="form__field"
-                  type="text"
-                  name="user_mail"
-                  id="user_mail"
-                  placeholder="Email"
-                />
-              </div>
+              <button class="modal__submit btn" type="submit">Register</button>
             </div>
-            <button class="modal__submit btn" type="submit">Register</button>
           </form>
         </div>
       </section>
     </main>
     <!-- Підвал сторінки -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <footer class="footer__container">
         <h2 class="footer__title">Contact</h2>
         <form class="footer-form">
@@ -971,7 +978,8 @@
           <div class="footer-form__wrapper">
             <input
               class="footer-form__field"
-              type="text"
+              type="email"
+              required
               name="user_mail"
               id="user_mail"
               placeholder="Email"
@@ -988,7 +996,7 @@
           </div>
           <button class="footer-form__submit btn" type="submit">Send</button>
         </form>
-        <list class="socials__list list">
+        <list class="socials__list footer__socials list">
           <ul class="socials__item">
             <svg class="socials__icon" width="16" height="16">
               <use href="./images/svg/sprite.svg#icon-twitter"></use>
@@ -1006,9 +1014,37 @@
           </ul>
         </list>
         <div class="footer__information">
-          <p class="footer__phone">(910)222-8855</p>
-          <p class="footer__city">New York</p>
+          <p class="footer__phone">
+            <svg class="footer__icon" width="13" height="13">
+              <use href="./images/svg/sprite.svg#icon-tel"></use>
+            </svg>
+            (910)222-8855
+          </p>
+          <p class="footer__city">
+            <svg class="footer__icon" width="13" height="13">
+              <use href="./images/svg/sprite.svg#icon-location"></use>
+            </svg>
+            New York
+          </p>
         </div>
+        <picture>
+          <!-- Mobile version -->
+          <source
+            srcset="./images/footer/img-1-m@1x.webp 1x, ./images/footer/img-1-m@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="./images/footer/img-1-m@1x.jpg 1x, ./images/footer/img-1-m@2x.jpg 2x"
+            type="image/jpg"
+          />
+          <img
+            class="footer__img"
+            src="./images/footer/img-1-d@1x.jpg"
+            alt="Ice-cream"
+            loading="lazy"
+            width="77px"
+          />
+        </picture>
       </footer>
     </footer>
 
