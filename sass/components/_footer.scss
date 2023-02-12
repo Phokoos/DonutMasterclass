@@ -85,12 +85,30 @@
 	display: flex;
 	align-items: center;
 	gap: 4px;
+
+	@include transition(color);
+
+	&:focus,
+	&:hover{
+		color: $main-btn-color;
+	}
 }
 
 .footer__city {
 	display: flex;
 	align-items: center;
 	gap: 4px;
+
+	@include transition(color);
+
+	&:focus,
+	&:hover{
+		color: $main-btn-color;
+	}
+}
+
+.footer__icon{
+	fill: currentColor;
 }
 
 .footer-form {

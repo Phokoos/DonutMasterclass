@@ -140,9 +140,12 @@
 
 .header__btn {
 	margin-bottom: 28px;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-right: auto;
 	margin-left: auto;
+	padding: auto;
 
 	@media screen and (min-width:768px) {
 		margin: 0;

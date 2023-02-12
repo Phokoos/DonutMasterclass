@@ -312,9 +312,18 @@ img {
 
 .header__btn {
   margin-bottom: 28px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: auto;
   margin-left: auto;
+  padding: auto;
 }
 @media screen and (min-width: 768px) {
   .header__btn {
@@ -1928,6 +1937,15 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.67, 0.19, 0.95, 0.61);
+          transition-timing-function: cubic-bezier(0.67, 0.19, 0.95, 0.61);
+}
+.footer__phone:focus, .footer__phone:hover {
+  color: #F3848C;
 }
 
 .footer__city {
@@ -1938,6 +1956,19 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.67, 0.19, 0.95, 0.61);
+          transition-timing-function: cubic-bezier(0.67, 0.19, 0.95, 0.61);
+}
+.footer__city:focus, .footer__city:hover {
+  color: #F3848C;
+}
+
+.footer__icon {
+  fill: currentColor;
 }
 
 .footer-form {
